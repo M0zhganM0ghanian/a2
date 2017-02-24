@@ -54,7 +54,7 @@ body {
 	text-align:left;
 	border: 10px outset #EB2933;
 	margin: 10px 100px 25px 100px;
-	padding: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 25px;
 	background-color:#EB2933;
 	font-size: 18px;
 }
@@ -81,10 +81,15 @@ body {
 .result{
 	text-align:center;
 	padding: 10px 10px 10px 10px;
-	margin: 25px 150px 25px 150px;
+	margin: 25px 300px 25px 300px;
 	border: 10px outset #EE3D4C;
 	background-color:#EE3D4C;
 	font-size: 30px;
+}
+
+.alert alert-info{
+	margin: 25px 300px 25px 300px;
+
 }
 
 #Quantity{
@@ -92,7 +97,7 @@ body {
 }
 
 #btn{
-	margin: 35px 100px 35px 50px;
+	margin: 35px 100px 35px 100px;
 	font-size: 30px;
 	border: 10px outset #E8141A;
 	background-color:#E8141A;

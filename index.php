@@ -7,6 +7,7 @@
 	<title>Password Generatore</title>
 	<link rel="stylesheet" href="a2.css" type="text/css">
 	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
+	<link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css' rel='stylesheet'>
 	<meta charset='utf-8'>
 
 </head>
@@ -17,12 +18,12 @@
 			<form method='GET' action='index.php'>
 				<div class='NumOfWords'>
 					<label for='numOfWords'><h3>Number Of Words</h3></label>
-					<input type='text' name='numOfWords' id='NumOfWords' required value='<?=$form->prefill('numOfWords')?>'>
+					<input type='text' name='numOfWords' id='NumOfWords'>
 				</div>
 
 				<div class='checkbox'>
 					<h3>Main criteria</h3>
-					<input type='checkbox' name='includeNumer' <?php if($form->isChosen('includeNumer')) echo 'CHECKED' ?>>
+					<input type='checkbox' name='includeNumer'>
 					<label>Include Number</label><br>
 
 					<input type='checkbox' name='includeSymbols'>
@@ -42,44 +43,25 @@
 					<label><input type="radio" name="case" value="Mixed">Mixed</label>
 				</div>
 
-				<div class="dropdown">
-					<label for='quantity'><h3>Quantity</h3></label>
-					<select name='quantity' id='Quantity'>
-					<option value='choose'>1</option>
-					<option value='2' >2</option>
-					<option value='3' >3</option>
-					<option value='4' >4</option>
-					<option value='5' >5</option>
-					</select>
-				</div>
 				<input type='submit' id='btn'>
 				<br>
-
-				<?php if($errors): ?>
-
-		    <div class='alert alert-danger'>
+			</form>
+		</div>
+	</div>
+			<?php if($errors): ?>
+				<div class='alert alert-danger'>
 					<ul>
 						<?php foreach($errors as $error): ?>
-						<li><?=$error?></li>
+							<li><?=$error?></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>
 
-				<?php elseif($form->isSubmitted()): ?>
-
-					<div class='alert alert-info'><?=$form->sanitize($length)?></div>
-
-					<?php foreach($createdPasswords as $pass): ?>
-						<div class="result">
-							<output name="x" for="quantity case checkbox NumOfWords">
-								<h2><?=$pass?></h2>
-							</output>
-						</div>
-
-					<?php endforeach; ?>
-
-				<?php endif; ?>
-
-			</form>
+			<?php elseif($form->isSubmitted()): ?>
+				<div class='alert alert-info'>Number of words : <?=$form->sanitize($length)?></div>
+							<div class="result">
+									<h2><?=$createdPassword?></h2>
+							</div>
+			<?php endif; ?>
 	</body>
 </html>
