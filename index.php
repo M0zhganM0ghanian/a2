@@ -17,7 +17,7 @@
 		<div class='form'>
 			<form method='GET' action='index.php'>
 				<div class='NumOfWords'>
-					<label for='numOfWords'><h3>Number Of Words</h3></label>
+					<label><p>Number Of Characters</p></label>
 					<input type='text' name='numOfWords' id='NumOfWords'>
 				</div>
 
@@ -30,10 +30,10 @@
 					<label>Include Symboles</label><br>
 
 					<input type='checkbox' name='excludeSimilar'>
-					<label>Exclude Similar Characters<h6>(e.g. i, l, 1, L, o, 0, O)</h6></label><br>
+					<label>Exclude Similar Characters<p class="small-font">(e.g. i, l, 1, L, o, 0, O)</p></label><br>
 
 					<input type='checkbox' name='excludeAmbiguous'>
-					<label>Exclude Ambiguous Characters<h6>({ } [ ] ( ) / \ ' " ` ~ , ; : . < > )</h6></label><br>
+					<label>Exclude Ambiguous Characters<p class="small-font">({ } [ ] ( ) / \ ' " ` ~ , ; : < . > )</p></label><br>
 				</div>
 
 				<div class="radio">

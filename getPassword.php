@@ -22,7 +22,7 @@ if($form->isSubmitted()) {
 
     $errors = $form->validate(
       [
-          'numOfWords' => 'required|min:0'
+          'numOfWords' => 'required|positiveInt:0|numeric|min:2|max:24'
       ]
 
     );

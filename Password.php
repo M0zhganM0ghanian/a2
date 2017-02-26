@@ -123,7 +123,7 @@ class Password{
   * Getter for $books property
   */
     public function createPassword($includeNum,  $includeSymbole, $length, $excludeAmbiguousChar, $excludeSimilarChar, $letterCase) {
-      if (!$excludeAmbiguousChar) {
+      if (!$excludeAmbiguousChar && $includeSymbole) {
         $this->includeAbiguousChar();
       }
       if (!$excludeSimilarChar) {

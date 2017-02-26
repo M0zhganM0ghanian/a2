@@ -168,6 +168,7 @@ class Form {
             'email' => ' is not a valid email address.',
             'min' => ' has to be greater than '.$parameter,
             'max' => ' has to be less than '.$parameter,
+            'positiveInt' => ' has to be a positive integer number.' ,
         ];
 
         # If a message for the rule was found, use that, otherwise default to " has an error"
@@ -236,5 +237,13 @@ class Form {
         return floatval($value) < floatval($parameter);
     }
 
+
+    /**
+  * Returns boolean if the given value is GREATER THAN (non-inclusive) the given parameter
+  *  and also just contains numeric .
+  */
+    private function positiveInt($value, $parameter) {
+        return (ctype_digit(str_replace(' ','', $value)) && floatval($value) > floatval($parameter));
+    }
 
 } # end of class
