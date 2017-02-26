@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="radio">
-					<h3>Letter type: </h3>
+					<h3>Letter type </h3>
 					<label><input type="radio" name="case" value="Lower">Lower case</label>
 					<label><input type="radio" name="case" value="Upper">Upper case</label>
 					<label><input type="radio" name="case" value="Mixed">Mixed</label>
