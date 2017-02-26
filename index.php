@@ -17,8 +17,8 @@
 		<div class='form'>
 			<form method='GET' action='index.php'>
 				<div class='NumOfWords'>
-					<label>Number Of Characters</label>
-					<input type='text' name='numOfWords' id='NumOfWords'>
+					<label>Number Of Characters (required)</label>
+					<input type='text' name='numOfWords' required  id='NumOfWords'>
 				</div>
 
 				<div class='checkbox'>
