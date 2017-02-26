@@ -28,14 +28,14 @@ class Password{
   }
 
   /**
-	* Getter for $books property
+	* Getter for password property
 	*/
     public function getPassword() {
         return $this->password;
     }
 
   /**
-	* Getter for $books property
+	* Add Number to the password string.
 	*/
     public function includeNumber() {
 
@@ -45,7 +45,7 @@ class Password{
     }
 
   /**
-	* Getter for $books property
+	* Add Symboles to the password string.
 	*/
     public function includeSymboles() {
 
@@ -55,7 +55,7 @@ class Password{
     }
 
   /**
-	* Getter for $books property
+	* Add Abiguous Characters to the string of characters.
 	*/
     public function includeAbiguousChar() {
 
@@ -63,7 +63,7 @@ class Password{
     }
 
   /**
-	* Getter for $books property
+	* Add similar Characters to the string of characters.
 	*/
     public function includeSimilarChar() {
 
@@ -71,7 +71,7 @@ class Password{
     }
 
   /**
-	* Getter for $books property
+	* Add letters to the password string.
 	*/
     public function addLetters() {
 
@@ -81,7 +81,7 @@ class Password{
     }
 
   /**
-  * Getter for $books property
+  * change the type of character based on the selection.
   */
     public function letterCase($letterCase) {
 
@@ -96,7 +96,7 @@ class Password{
 
 
   /**
-	* Getter for $books property
+	* Calculate the number of character for letters, numbers, symboles based on the selection.
 	*/
     public function protionCalculator($IncludeNum, $IncludeSymbole, $length) {
 
@@ -120,7 +120,7 @@ class Password{
     }
 
   /**
-  * Getter for $books property
+  * Create password based on the selection
   */
     public function createPassword($includeNum,  $includeSymbole, $length, $excludeAmbiguousChar, $excludeSimilarChar, $letterCase) {
       if (!$excludeAmbiguousChar && $includeSymbole) {
